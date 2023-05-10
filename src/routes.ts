@@ -4,5 +4,6 @@ export default (app: Application) => {
     const routes = () => {
         
     }
+    
     routes();
 }
