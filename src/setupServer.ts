@@ -1,4 +1,3 @@
-import { CustomError, IError } from './shared/globals/helpers/errorHandler';
 import {
   Application,
   json,
@@ -21,6 +20,7 @@ import { createClient } from "redis";
 import { createAdapter } from "@socket.io/redis-adapter";
 import applicationRoutes from "./routes";
 import Logger from "bunyan";
+import { CustomError, IError } from "./shared/globals/helpers/errorHandler";
 
 
 const log: Logger = config.createLogger("server");

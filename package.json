@@ -5,16 +5,20 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon -r tsconfig-paths/register src/app.ts | ./node_modules/.bin/bunyan",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@socket.io/redis-adapter": "^8.1.0",
+    "@types/bcryptjs": "^2.4.2",
     "@types/bunyan": "^1.8.8",
     "@types/mongoose": "^5.11.97",
+    "bcryptjs": "^2.4.3",
     "bunyan": "^1.8.15",
+    "cloudinary": "^1.36.4",
     "compression": "^1.7.4",
     "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
@@ -25,9 +29,12 @@
     "hpp": "^0.2.3",
     "http": "^0.0.1-security",
     "http-status-code": "^2.1.0",
+    "joi": "^17.9.2",
     "nodemon": "^2.0.22",
     "redis": "^4.6.5",
-    "socket.io": "^4.6.1"
+    "socket.io": "^4.6.1",
+    "ttypescript": "^1.5.15",
+    "typescript-transform-paths": "^3.4.6"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",
