@@ -29,12 +29,12 @@ authSchema.pre("save", async function (this: IAuthDocument, next: () => void) {
     next();
 });
 
-authSchema.methods.comparePassword = async (password: string): Promise<boolean> => {
+authSchema.methods.comparePassword = async function (password: string): Promise<boolean> {
     const hashedPassword: string = (this as unknown as IAuthDocument).password!;
     return compare(password, hashedPassword);
-}
+};
 
-authSchema.methods.hashPassword = async (password: string): Promise<string>{
+authSchema.methods.hashPassword = async (password: string): Promise<string>=>{
     return hash(password, SALT_ROUND);
 }
 
